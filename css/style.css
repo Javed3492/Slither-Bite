@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=New+Tegomin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Henny+Penny&family=New+Tegomin&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+.body{
+    background: url(../BG_Img.png);
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start; /* pushes board to the left */
+    align-items: center;         /* keeps it vertically centered */
+}
+
+#scoreBox{
+    position: absolute;
+    top: 10px;
+    right: 250px;
+    font-size: 70px;
+    font-weight: bold;
+    color:aliceblue;
+    font-family: "New Tegomin", serif;
+}
+#board{
+    background: linear-gradient(#000000, rgb(49 0 0));
+    width: 90vmin;
+    height: 92vmin;
+    border: 2px solid white;
+    margin-left: 50px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+.head{
+    background: linear-gradient(rgb(88, 242, 242), rgb(222, 161, 100));
+    border: 2px solid purple;
+    transform: scale(1.02);
+    border-radius: 12px;
+}
+
+.snake{
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 30px;
+}
+
+.food{
+    /* background-color: yellow;
+    border-radius: 8px;*/
+
+    /* here frog face has been added as food*/
+    width: 100%;              /* adjust size as per grid cell */
+    height: 100%;             /* adjust size as per grid cell */
+    background: url("../food.png") no-repeat center center;
+    background-size: contain;   /* makes image fit the box */
+    border-radius: 8px;  
+
+}
+
+#slitherbite{
+    position: absolute;
+    top: 200px;
+    right: 130px;
+    font-size: 100px;
+    font-weight: bold;
+    color:aliceblue;
+    font-family: "Henny Penny", system-ui;
+    background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00);
+    -webkit-background-clip: text;
+    text-shadow: 
+        0 0 5px #ff0000,
+        0 0 10px #ff4500,
+        0 0 20px #ff6347,
+        0 0 40px #ffa500;
+}
